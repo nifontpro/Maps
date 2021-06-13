@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.apply {
             beginTransaction()
                 .add(R.id.container, GoogleMapsFragment.newInstance())
-                .addToBackStack("")
+//                .addToBackStack("")
                 .commitAllowingStateLoss()
         }
     }
