@@ -112,14 +112,14 @@ class GoogleMapsFragment : Fragment() {
 
     private fun addMarkerToArray(location: LatLng) {
         val marker = setMarker(location, markers.size.toString(), R.drawable.ic_map_pin)
-        markers.add(marker)
+        marker?.let { markers.add(it) }
     }
 
     private fun setMarker(
         location: LatLng,
         searchText: String,
         resourceId: Int
-    ): Marker {
+    ): Marker? {
         return map.addMarker(
             MarkerOptions()
                 .position(location)
