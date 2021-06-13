@@ -35,9 +35,19 @@
             android:theme="@style/Theme.Maps.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter android:label="ru.nifontbus.MainActivity">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Принимаем URI с началом "example://intent" -->
+                <data
+                    android:host="intent"
+                    android:scheme="example" />
+            </intent-filter>
+
         </activity>
     </application>
 
