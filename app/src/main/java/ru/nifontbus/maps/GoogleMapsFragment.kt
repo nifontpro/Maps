@@ -156,4 +156,5 @@ class GoogleMapsFragment : Fragment() {
     companion object {
         fun newInstance() = GoogleMapsFragment()
     }
+    // change
 }
